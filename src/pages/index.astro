@@ -1,158 +1,230 @@
 ---
-import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
-import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
-import { dateRange } from "@lib/utils";
-import { SITE, HOME, SOCIALS } from "@consts";
 
-const blog = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
-
-const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0,SITE.NUM_PROJECTS_ON_HOMEPAGE);
-
-const allwork = (await getCollection("work"))
-  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
-  .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
-
-const work = await Promise.all(
-  allwork.map(async (item) => {
-    const { Content } = await item.render();
-    return { ...item, Content };
-  })
-);
-
+const title = "Creatives for Collective Action";
+const description =
+  "Creatives for Collective Action connects Boston-area artists, organizers, and communities through justice-centered public art.";
 ---
 
-<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+<PageLayout title={title} description={description}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white">
-      Hi, I'm Nano <span class="text-xl">👋🏻</span> 
-    </h4>
-    <div class="space-y-16">
-      <section>
-        <article class="space-y-4">
-          <p class="animate">
-            I am a minimal, seo friendly, accessible portfolio and blog for developers. 
-            I am an even more lightweight version of my popular theme
-            <Link href="https://github.com/markhorn-dev/astro-sphere" aria-label="Astro Sphere on Github" external>
-              Astro Sphere
-            </Link>.
-            I have a lighthouse scores of 100 across the board for performance, 
-            accesibility, best practices and SEO.
-          </p>
-          <p class="animate">
-            I come packed with full type safety, a sitemap, an rss feed, markdown 
-            and mdx support (use components in your markdown) through astro integrations.
-            I am styled with tailwind and come preconfigured with light, dark and 
-            system/os theme preferences out of the box.
-          </p>
-          <p class="animate">
-            Visit
-            <Link href="https://github.com/markhorn-dev/astro-nano" aria-label="Astro Nano on Github" external>
-              Astro Nano on Github
-            </Link>
-            to fork the repository, read the docs or one-click deploy on Vercel or Netlify. 
-          </p>
-        </article>
-      </section>
-
+    <div class="space-y-20">
       <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Latest posts
-          </h5>
-          <Link href="/blog">
-            See all posts
+        <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+          Boston-based creative action collective
+        </p>
+
+        <div class="space-y-4">
+          <h1 class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl">
+            Creatives for Collective Action
+          </h1>
+
+          <p class="text-2xl font-semibold leading-snug text-black dark:text-white">
+            Connecting Boston-area artists, organizers, and communities through justice-centered public art.
+          </p>
+
+          <p>
+            Creatives for Collective Action is a Boston-based collective building relationships between artists,
+            activists, justice organizations, cultural spaces, and community members. Our goal is to bring
+            communities together and highlight issues of justice through gatherings, workshops, art builds, and
+            collaborative projects that help communities create public-facing art for collective action.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <Link href="/contact">
+            Join the Open Call
+          </Link>
+          <Link href="/contact">
+            Collaborate With Us
           </Link>
         </div>
-        <ul class="flex flex-col gap-4">
-          {blog.map(post => (
-            <li>
-              <ArrowCard entry={post} />
-            </li>
-          ))}
-        </ul>
       </section>
 
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Work Experience
-          </h5>
-          <Link href="/work">
-            See all work
-          </Link>
+      <section class="animate space-y-8">
+        <div class="space-y-3">
+          <h2 class="text-2xl font-semibold text-black dark:text-white">
+            We build creative infrastructure for justice work.
+          </h2>
+          <p>
+            We are helping Boston connect its thriving community of artists, organizers, cultural spaces, and
+            community campaigns to each other with the shared goal of collective action. We exist to help build
+            the relationships, shared tools, and gathering spaces that make collaboration easier, more ethical,
+            and more joyful.
+          </p>
         </div>
-        <ul class="flex flex-col space-y-4">
-          {work.map(entry => (
-            <li>
-              <div class="text-sm opacity-75">
-                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-              </div>
-              <div class="font-semibold text-black dark:text-white">
-                {entry.data.company}
-              </div>
-              <div class="text-sm opacity-75">
-                {entry.data.role}
-              </div>
-              <article>
-                <entry.Content />
-              </article>
-            </li>
-          ))}
-        </ul>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="space-y-2 rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            <h3 class="font-semibold text-black dark:text-white">
+              Gather
+            </h3>
+            <p>
+              We host events, workshops, listening sessions, and art builds where artists, organizers, and
+              community members can meet, make, and imagine together.
+            </p>
+          </article>
+
+          <article class="space-y-2 rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            <h3 class="font-semibold text-black dark:text-white">
+              Create
+            </h3>
+            <p>
+              We support public-facing creative work including banners, signs, zines, printmaking, installations,
+              visual storytelling, social graphics, and other forms of art for collective action.
+            </p>
+          </article>
+
+          <article class="space-y-2 rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            <h3 class="font-semibold text-black dark:text-white">
+              Connect
+            </h3>
+            <p>
+              We help artists find meaningful justice-based projects and help organizers connect with local
+              creatives who can support campaigns, events, and community initiatives.
+            </p>
+          </article>
+
+          <article class="space-y-2 rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            <h3 class="font-semibold text-black dark:text-white">
+              Resource
+            </h3>
+            <p>
+              We are building systems for shared materials, paid commissions, fundraising opportunities, and
+              in-person and online spaces where artists can sell or share work in support of community and
+              justice causes.
+            </p>
+          </article>
+        </div>
       </section>
 
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Recent projects
-          </h5>
-          <Link href="/projects">
-            See all projects
-          </Link>
+      <section class="animate space-y-8">
+        <div class="space-y-3">
+          <h2 class="text-2xl font-semibold text-black dark:text-white">
+            Artists, organizers, and community members all have a place here.
+          </h2>
         </div>
-        <ul class="flex flex-col gap-4">
-          {projects.map(project => (
-            <li>
-              <ArrowCard entry={project} />
-            </li>
-          ))}
-        </ul>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="space-y-2">
+            <h3 class="font-semibold text-black dark:text-white">
+              For Artists & Creatives
+            </h3>
+            <p>
+              Join the network, meet collaborators, attend gatherings, share skills, sell or contribute work for
+              community-based fundraisers, and find paid or solidarity-based opportunities to support justice
+              work through art.
+            </p>
+          </article>
+
+          <article class="space-y-2">
+            <h3 class="font-semibold text-black dark:text-white">
+              For Organizers & Justice Organizations
+            </h3>
+            <p>
+              Connect with artists who can help make your work more visible, participatory, emotionally
+              resonant, and accessible.
+            </p>
+          </article>
+
+          <article class="space-y-2">
+            <h3 class="font-semibold text-black dark:text-white">
+              For Community Members & Supporters
+            </h3>
+            <p>
+              Attend events, contribute ideas, offer materials or space, support fundraising projects, and help
+              build a more connected Boston arts and justice ecosystem.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Help shape what this collective becomes.
+        </h2>
+
+        <p>
+          We are gathering artists, organizers, activists, cultural workers, and community members interested in
+          using creativity for justice work in Greater Boston.
+        </p>
+
+        <p>
+          You do not need to be a professional artist to participate. We welcome people who make art
+          professionally, casually, collaboratively, experimentally, culturally, politically, or simply because they care.
+        </p>
+
+        <p>
+          Fill out the open call form if you want to attend future gatherings, join art builds, collaborate on
+          projects, share skills, or be contacted about future paid or solidarity-based opportunities.
+        </p>
+
+        <Link href="/contact">
+          Fill Out the Open Call Form
+        </Link>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Are you part of a justice organization, campaign, or community initiative?
+        </h2>
+
+        <p>
+          We are also inviting organizations, organizers, cultural spaces, and community groups to reach out if
+          they are interested in creative support or collaboration. We can help think through public-facing art,
+          art builds, campaign visuals, workshops, fundraising events, or other creative ways to make your work
+          more visible, participatory, and accessible.
+        </p>
+
+        <p>
+          We are especially interested in building relationships before urgent moments arise, so that artists and
+          organizations can collaborate with more trust, care, and shared purpose.
+        </p>
+
+        <Link href="/contact">
+          Reach Out to Collaborate
+        </Link>
       </section>
 
       <section class="animate space-y-4">
-        <h5 class="font-semibold text-black dark:text-white">
-          Let's Connect
-        </h5>
-        <article>
-          <p>
-            If you want to get in touch with me about something or just to say hi,
-            reach out on social media or send me an email.
-          </p>
-        </article>
-        <ul class="flex flex-wrap gap-2">
-          {SOCIALS.map(SOCIAL => (
-            <li class="flex gap-x-2 text-nowrap">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
-                {SOCIAL.NAME}
-              </Link>
-              {"/"}
-            </li>
-          ))}
-          <li class="line-clamp-1">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
-              {SITE.EMAIL}
-            </Link>
-          </li>
-        </ul>
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Come make with us.
+        </h2>
+
+        <p>
+          Our first gatherings will bring artists, organizers, and community members together to learn what
+          people need, share our theory of change, and create low-barrier public art in community.
+        </p>
+
+        <p>
+          Future events may include art builds, workshops, skill-shares, listening sessions, fundraising markets,
+          and collaborative projects with local justice organizations.
+        </p>
+
+        <Link href="/events">
+          View Calendar / Events
+        </Link>
+      </section>
+
+      <section class="animate space-y-4">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Our Belief
+        </h2>
+
+        <p>
+          Art is not only a tool for communication. It is a way to build relationships, make movements visible,
+          create shared public meaning, and invite participation.
+        </p>
+
+        <p class="text-xl font-semibold text-black dark:text-white">
+          We believe art can help communities gather, grieve, imagine, celebrate, and act for justice.
+        </p>
+
+        <Link href="/contact">
+          Get in Touch
+        </Link>
       </section>
     </div>
   </Container>

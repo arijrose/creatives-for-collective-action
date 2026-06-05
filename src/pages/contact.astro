@@ -1,0 +1,161 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import Link from "@components/Link.astro";
+
+const title = "Contact / Collaborate | Creatives for Collective Action";
+const description =
+  "Contact Creatives for Collective Action, join the open call, collaborate on an art build, or support creative infrastructure for justice work.";
+---
+
+<PageLayout title={title} description={description}>
+  <Container>
+    <div class="space-y-20">
+      <section class="animate space-y-6">
+        <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+          Contact / Collaborate
+        </p>
+
+        <div class="space-y-4">
+          <h1 class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl">
+            Let’s build together.
+          </h1>
+
+          <p class="text-xl font-semibold leading-snug text-black dark:text-white">
+            Creatives for Collective Action is gathering artists, organizers, activists, cultural workers,
+            justice organizations, community groups, cultural spaces, and supporters who want to use creativity
+            in service of collective action.
+          </p>
+
+          <p>
+            Whether you want to join the network, attend a gathering, collaborate on an art build, request creative
+            support, offer space or materials, or simply learn more, we would love to hear from you.
+          </p>
+        </div>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Join the Open Call
+        </h2>
+
+        <p class="font-semibold text-black dark:text-white">
+          For artists, creatives, organizers, activists, cultural workers, and community members
+        </p>
+
+        <p>
+          Fill out our open call / interest form if you want to join the network, attend future gatherings,
+          participate in art builds, share skills, collaborate on projects, or be contacted about future paid
+          or solidarity-based opportunities.
+        </p>
+
+        <p>
+          You do not need to be a professional artist to participate. We welcome people who make art professionally,
+          casually, collaboratively, experimentally, culturally, politically, or simply because they care.
+        </p>
+
+        <Link href="#">
+          Fill Out the Open Call Form
+        </Link>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Collaborate With Us
+        </h2>
+
+        <p class="font-semibold text-black dark:text-white">
+          For justice organizations, campaigns, and community groups
+        </p>
+
+        <p>
+          Are you working on a campaign, community initiative, event, fundraiser, or justice-based project that
+          could use creative support?
+        </p>
+
+        <p>
+          We are interested in collaborating on art builds, campaign visuals, public-facing creative projects,
+          workshops, fundraising art events, zines, installations, signs, banners, social graphics, and other forms
+          of creative action.
+        </p>
+
+        <p>
+          Reach out to tell us what you are working on, what kind of creative collaboration you are imagining,
+          your timeline, and what resources or support are available.
+        </p>
+
+        <Link href="mailto:your-email@example.com">
+          Reach Out About a Collaboration
+        </Link>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Offer Space, Materials, or Support
+        </h2>
+
+        <p class="font-semibold text-black dark:text-white">
+          For cultural spaces, venues, funders, and community supporters
+        </p>
+
+        <p>
+          We are building shared creative infrastructure for justice work in Greater Boston. If you have access
+          to space, materials, printing, tools, documentation support, funding, storage, studio access, or other
+          resources, we would love to connect.
+        </p>
+
+        <p>
+          We are especially interested in building relationships with people and spaces that want to support
+          recurring gatherings, workshops, art builds, artist markets, and public-facing creative projects.
+        </p>
+
+        <Link href="mailto:your-email@example.com">
+          Offer Support
+        </Link>
+      </section>
+
+      <section class="animate space-y-4">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Contact Information
+        </h2>
+
+        <ul class="space-y-2">
+          <li>
+            <strong class="text-black dark:text-white">Email:</strong>
+            <Link href="mailto:your-email@example.com">
+              your-email@example.com
+            </Link>
+          </li>
+          <li>
+            <strong class="text-black dark:text-white">Instagram:</strong>
+            <Link href="#" external>
+              @yourhandle
+            </Link>
+          </li>
+          <li>
+            <strong class="text-black dark:text-white">Location:</strong>
+            Boston / Greater Boston
+          </li>
+        </ul>
+
+        <p>
+          We are a small emerging collective and will respond as capacity allows.
+        </p>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Not sure where to start?
+        </h2>
+
+        <p>
+          That’s okay. Send us a note about who you are, what you are interested in, and how you might want to connect.
+        </p>
+
+        <Link href="mailto:your-email@example.com">
+          Get in Touch
+        </Link>
+      </section>
+    </div>
+  </Container>
+</PageLayout>

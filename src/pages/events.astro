@@ -1,0 +1,208 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import Link from "@components/Link.astro";
+
+const title = "Calendar / Events | Creatives for Collective Action";
+const description =
+  "Gatherings, workshops, art builds, and community events from Creatives for Collective Action.";
+---
+
+<PageLayout title={title} description={description}>
+  <Container>
+    <div class="space-y-20">
+      <section class="animate space-y-6">
+        <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+          Calendar / Events
+        </p>
+
+        <div class="space-y-4">
+          <h1 class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl">
+            Come make, gather, and build with us.
+          </h1>
+
+          <p class="text-xl font-semibold leading-snug text-black dark:text-white">
+            Creatives for Collective Action hosts gatherings, workshops, listening sessions,
+            art builds, and community events that bring artists, organizers, activists,
+            cultural workers, and community members together.
+          </p>
+
+          <p>
+            Our events are spaces to meet one another, share skills, create public-facing art,
+            support justice-based projects, and imagine what collective action through the arts
+            can look like in Greater Boston.
+          </p>
+        </div>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="space-y-3">
+          <h2 class="text-2xl font-semibold text-black dark:text-white">
+            Featured Upcoming Events
+          </h2>
+
+          <p>
+            Upcoming gatherings will be announced soon.
+          </p>
+
+          <p>
+            We are currently planning our first public gatherings and art builds. These events
+            will be designed to welcome professional artists, emerging creatives, organizers,
+            activists, students, cultural workers, and community members who are curious about
+            using art in service of justice work.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="space-y-3 rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+              Coming soon
+            </p>
+            <h3 class="text-xl font-semibold text-black dark:text-white">
+              First Community Art Build
+            </h3>
+            <p>
+              A low-barrier gathering for artists, organizers, activists, cultural workers, and
+              community members to meet one another, share ideas, and create public-facing art
+              in community.
+            </p>
+            <Link href="/contact">
+              Join the Open Call to Hear About Events
+            </Link>
+          </article>
+
+          <article class="space-y-3 rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+              Coming soon
+            </p>
+            <h3 class="text-xl font-semibold text-black dark:text-white">
+              Listening Session & Skill Share
+            </h3>
+            <p>
+              A participatory space to learn what artists, organizers, and community groups need,
+              share skills, and help shape the future of the collective.
+            </p>
+            <Link href="/contact">
+              Get Involved
+            </Link>
+          </article>
+        </div>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Full Calendar
+        </h2>
+
+        <p>
+          As our programming grows, this page will include a full events calendar where visitors
+          can view upcoming gatherings, click into event details, and find RSVP information.
+        </p>
+
+        <p>
+          For now, upcoming events will be listed above as they are confirmed.
+        </p>
+      </section>
+
+      <section class="animate space-y-4">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          What to Expect
+        </h2>
+
+        <p>
+          Our gatherings are participatory, welcoming, and beginner-friendly. You do not need
+          formal art training to attend.
+        </p>
+
+        <p>
+          Some events will focus on making things together. Some will focus on listening, planning,
+          or building relationships. Others may support a specific community campaign, justice
+          organization, or public-facing creative project.
+        </p>
+
+        <p>
+          You can come to make art, meet collaborators, share skills, learn from others, support
+          a cause, connect with local artists and organizers, or help shape the future of the collective.
+        </p>
+      </section>
+
+      <section class="animate space-y-4">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Art Builds
+        </h2>
+
+        <h3 class="font-semibold text-black dark:text-white">
+          What is an art build?
+        </h3>
+
+        <p>
+          An art build is a gathering where artists, organizers, and community members create
+          visual materials together for a campaign, event, action, fundraiser, or community need.
+        </p>
+
+        <p>
+          Art builds might include banners, signs, posters, zines, props, installations, social
+          graphics, or other public-facing creative work. They are also spaces for relationship-building,
+          political education, imagination, and shared care.
+        </p>
+      </section>
+
+      <section class="animate space-y-4">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Accessibility & Care
+        </h2>
+
+        <p>
+          We want our events to be as welcoming and accessible as possible. As we plan each
+          gathering, we will share information about location, transit access, food, masking/COVID
+          expectations, materials, physical accessibility, and any participation needs.
+        </p>
+
+        <p>
+          If you have access needs, questions, or suggestions for making our events more welcoming,
+          please reach out.
+        </p>
+
+        <Link href="/contact">
+          Contact Us
+        </Link>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Host or Partner With Us
+        </h2>
+
+        <p>
+          Are you part of a justice organization, campaign, community group, cultural space, or
+          venue interested in hosting or collaborating on an event?
+        </p>
+
+        <p>
+          We are interested in partnering on art builds, workshops, creative action support,
+          fundraising events, listening sessions, and public-facing art projects that support
+          community and justice causes in Greater Boston.
+        </p>
+
+        <Link href="/contact">
+          Collaborate With Us
+        </Link>
+      </section>
+
+      <section class="animate space-y-4">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Past Events
+        </h2>
+
+        <p>
+          Documentation from past gatherings and art builds will be shared here as the collective grows.
+        </p>
+
+        <p>
+          Future documentation may include photos, project descriptions, artist reflections, partner
+          organizations, and examples of the work created together.
+        </p>
+      </section>
+    </div>
+  </Container>
+</PageLayout>

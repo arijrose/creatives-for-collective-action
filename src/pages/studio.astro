@@ -1,0 +1,94 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import Link from "@components/Link.astro";
+
+const title = "Studio | Creatives for Collective Action";
+const description =
+  "A future shared space for artists, organizers, activists, and community members to gather, create, and collaborate on justice-centered public art.";
+---
+
+<PageLayout title={title} description={description}>
+  <Container>
+    <div class="space-y-20">
+      <section class="animate space-y-6">
+        <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+          Studio
+        </p>
+
+        <div class="space-y-4">
+          <h1 class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl">
+            A future shared space for artists and activists.
+          </h1>
+
+          <p class="text-xl font-semibold leading-snug text-black dark:text-white">
+            Creatives for Collective Action is working toward a shared studio space where artists,
+            organizers, activists, and community members can gather, create, store materials, and
+            collaborate on justice-centered public art.
+          </p>
+
+          <p>
+            Our goal is to build a space that supports art builds, workshops, campaign visuals,
+            public-facing creative projects, skill-sharing, and paid creative collaborations.
+          </p>
+        </div>
+      </section>
+
+      <section class="animate space-y-6">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          What We Imagine
+        </h2>
+
+        <p>
+          The studio could support:
+        </p>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Art builds and workshops
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Shared tools and materials
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Banner, sign, zine, and printmaking projects
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Creative support for justice organizations and community campaigns
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Open studio hours
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Artist-organizer collaboration
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Storage for materials and public art supplies
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Community gatherings and skill-shares
+          </article>
+        </div>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Coming Soon
+        </h2>
+
+        <p>
+          We are currently exploring studio and workspace options in Greater Boston.
+        </p>
+
+        <p>
+          More information about location, access, open hours, community agreements, and ways to
+          use or support the space will be shared as this work develops.
+        </p>
+
+        <Link href="/contact">
+          Contact Us About Space or Materials
+        </Link>
+      </section>
+    </div>
+  </Container>
+</PageLayout>

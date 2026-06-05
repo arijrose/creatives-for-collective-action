@@ -1,0 +1,182 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import Link from "@components/Link.astro";
+
+const title = "Shop | Creatives for Collective Action";
+const description =
+  "A future curated fundraiser hub for artist-made work in support of community and justice causes.";
+---
+
+<PageLayout title={title} description={description}>
+  <Container>
+    <div class="space-y-20">
+      <section class="animate space-y-6">
+        <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+          Shop
+        </p>
+
+        <div class="space-y-4">
+          <h1 class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl">
+            Artist-made work in support of community and justice causes.
+          </h1>
+
+          <p class="text-xl font-semibold leading-snug text-black dark:text-white">
+            Creatives for Collective Action is building a curated fundraiser hub where artists can
+            sell, share, or contribute work in support of community-based justice efforts.
+          </p>
+
+          <p>
+            Rather than operating as a traditional store, this page will highlight artist-made
+            projects, fundraising campaigns, and creative goods connected to local causes.
+            Purchases may link to outside platforms where artists or partner campaigns manage
+            sales, fulfillment, and donations.
+          </p>
+        </div>
+      </section>
+
+      <section class="animate space-y-6">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Featured Fundraisers
+        </h2>
+
+        <div class="rounded-2xl border border-black/10 p-6 dark:border-white/10">
+          <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+            Coming soon
+          </p>
+
+          <h3 class="mt-3 text-xl font-semibold text-black dark:text-white">
+            Featured artist-led and community-based fundraising projects
+          </h3>
+
+          <p class="mt-3">
+            This section will highlight current artist-led or community-based fundraising projects,
+            including project images, artist names, supported causes, descriptions, proceeds
+            breakdowns, and links to purchase or donation pages.
+          </p>
+        </div>
+      </section>
+
+      <section class="animate space-y-6">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Shop by Cause
+        </h2>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Immigration justice
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Climate justice
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Housing justice
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Mutual aid
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Community care
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Labor and worker justice
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Arts access and cultural equity
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Other community-based justice efforts
+          </article>
+        </div>
+      </section>
+
+      <section class="animate space-y-6">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Shop by Type
+        </h2>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Prints
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Zines
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Stickers
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Apparel
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Posters
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Digital downloads
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Event merchandise
+          </article>
+          <article class="rounded-2xl border border-black/10 p-5 dark:border-white/10">
+            Fundraising bundles
+          </article>
+        </div>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          For Artists
+        </h2>
+
+        <p>
+          Are you an artist interested in selling, sharing, or contributing work in support of a
+          community or justice cause?
+        </p>
+
+        <p>
+          We are building future opportunities for artists to participate in online fundraisers,
+          in-person art markets, campaign-based art sales, and collaborative fundraising projects.
+        </p>
+
+        <Link href="/contact">
+          Join the Open Call
+        </Link>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          For Organizations and Campaigns
+        </h2>
+
+        <p>
+          Are you part of a community group, justice organization, campaign, or mutual aid effort
+          interested in collaborating with artists on a fundraiser?
+        </p>
+
+        <p>
+          We are interested in helping artists and organizations build ethical, transparent
+          fundraising projects that support both creative labor and community needs.
+        </p>
+
+        <Link href="/contact">
+          Collaborate With Us
+        </Link>
+      </section>
+
+      <section class="animate space-y-4">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Coming Soon
+        </h2>
+
+        <p>
+          The shop is not live yet.
+        </p>
+
+        <p>
+          As we grow, we will share more information about artist participation, fundraising
+          partnerships, featured causes, product types, and how proceeds will be distributed.
+        </p>
+      </section>
+    </div>
+  </Container>
+</PageLayout>

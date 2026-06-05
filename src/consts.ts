@@ -1,44 +1,38 @@
 import type { Site, Metadata, Socials } from "@types";
 
 export const SITE: Site = {
-  NAME: "Astro Nano",
-  EMAIL: "markhorn.dev@gmail.com",
-  NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_WORKS_ON_HOMEPAGE: 2,
-  NUM_PROJECTS_ON_HOMEPAGE: 3,
+  NAME: "Creatives for Collective Action",
+  EMAIL: "your-email@example.com",
+  NUM_POSTS_ON_HOMEPAGE: 0,
+  NUM_WORKS_ON_HOMEPAGE: 0,
+  NUM_PROJECTS_ON_HOMEPAGE: 0,
 };
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "Astro Nano is a minimal and lightweight blog and portfolio.",
+  DESCRIPTION:
+    "Creatives for Collective Action connects Boston-area artists, organizers, and communities through justice-centered public art.",
 };
 
 export const BLOG: Metadata = {
   TITLE: "Blog",
-  DESCRIPTION: "A collection of articles on topics I am passionate about.",
+  DESCRIPTION: "Updates and writing from Creatives for Collective Action.",
 };
 
 export const WORK: Metadata = {
   TITLE: "Work",
-  DESCRIPTION: "Where I have worked and what I have done.",
+  DESCRIPTION: "Past work and experience from Creatives for Collective Action.",
 };
 
 export const PROJECTS: Metadata = {
-  TITLE: "Projects",
-  DESCRIPTION: "A collection of my projects, with links to repositories and demos.",
+  TITLE: "Projects / Art Builds",
+  DESCRIPTION:
+    "Justice-centered creative projects, art builds, workshops, and public-facing art from Creatives for Collective Action.",
 };
 
 export const SOCIALS: Socials = [
-  { 
-    NAME: "twitter-x",
-    HREF: "https://twitter.com/markhorn_dev",
+  {
+    NAME: "instagram",
+    HREF: "https://www.instagram.com/yourhandle",
   },
-  { 
-    NAME: "github",
-    HREF: "https://github.com/markhorn-dev"
-  },
-  { 
-    NAME: "linkedin",
-    HREF: "https://www.linkedin.com/in/markhorn-dev",
-  }
 ];

@@ -1,0 +1,113 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import Link from "@components/Link.astro";
+
+const title = "Projects / Art Builds | Creatives for Collective Action";
+const description =
+  "Justice-centered creative projects, art builds, workshops, and public-facing art from Creatives for Collective Action.";
+---
+
+<PageLayout title={title} description={description}>
+  <Container>
+    <div class="space-y-20">
+      <section class="animate space-y-6">
+        <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+          Projects / Art Builds
+        </p>
+
+        <div class="space-y-4">
+          <h1 class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl">
+            Public art for collective action.
+          </h1>
+
+          <p class="text-xl font-semibold leading-snug text-black dark:text-white">
+            Creatives for Collective Action supports justice-centered creative projects that help
+            communities gather, communicate, organize, fundraise, and imagine together.
+          </p>
+
+          <p>
+            Our projects may include art builds, workshops, campaign visuals, public-facing
+            installations, fundraising art events, zines, banners, signs, social graphics, and other
+            creative collaborations between artists, organizers, and community groups.
+          </p>
+        </div>
+      </section>
+
+      <section class="animate space-y-4">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          What Is an Art Build?
+        </h2>
+
+        <p>
+          An art build is a gathering where artists, organizers, and community members create
+          visual materials together for a campaign, event, action, fundraiser, or community need.
+        </p>
+
+        <p>
+          Art builds can produce banners, signs, posters, zines, props, installations, digital
+          graphics, or other public-facing creative work. Just as importantly, they create space
+          for relationship-building, skill-sharing, political education, care, and imagination.
+        </p>
+
+        <p>
+          You do not need to be a professional artist to participate in an art build. Our goal is to
+          make creative participation welcoming, useful, and connected to real community needs.
+        </p>
+      </section>
+
+      <section class="animate space-y-6">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Current Projects
+        </h2>
+
+        <div class="rounded-2xl border border-black/10 p-6 dark:border-white/10">
+          <div class="space-y-3">
+            <p class="text-sm font-semibold uppercase tracking-widest opacity-75">
+              In development
+            </p>
+
+            <h3 class="text-xl font-semibold text-black dark:text-white">
+              First Gatherings, Art Builds, and Pilot Collaborations
+            </h3>
+
+            <p>
+              We are currently developing our first gatherings, art builds, and pilot collaborations.
+            </p>
+
+            <p>
+              As our work grows, this page will include documentation of projects, photos from art
+              builds, artist reflections, partner organizations, and examples of public-facing creative
+              work created through the collective.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="animate space-y-4 rounded-2xl border border-black/10 p-6 dark:border-white/10">
+        <h2 class="text-2xl font-semibold text-black dark:text-white">
+          Want to Collaborate?
+        </h2>
+
+        <p>
+          Are you an artist, organizer, justice organization, community group, cultural space, or
+          supporter interested in building something with us?
+        </p>
+
+        <p>
+          Reach out if you are interested in an art build, public-facing creative project, fundraising
+          collaboration, workshop, or campaign support.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <Link href="/contact">
+            Collaborate With Us
+          </Link>
+          <Link href="/contact">
+            Join the Open Call
+          </Link>
+        </div>
+      </section>
+    </div>
+  </Container>
+</PageLayout>
